@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌐↗️</title>
+
+  <style>
+    :root {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main {
+      background: #eeeeee;
+      padding: 16px;
+      border-radius: 8px;
+    }
+
+    textarea {
+      width: 100%;
+      margin-top: 4px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <script>
+    let hrefURL = new URL(location.href)
+
+    let t = hrefURL.searchParams.get('t')
+
+    if (t) {
+      window.open(atob(t), '_self')
+    }
+  </script>
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+  <main>
+    <h1>Browser Jump</h1>
+    <hr>
+    <h2>Jump</h2>
+    <div>
+      <input type="text" id="text-jmp">
+      <button type="button" id="btn-jmp">Jump!</button>
+    </div>
+    <hr>
+    <h2>Create Link</h2>
+    <div>
+      <input type="text" id="text-link">
+      <button type="button" id="btn-link">Create Link</button>
+    </div>
+    <div class="flex">
+      <textarea disabled id="out-link"></textarea>
+    </div>
+  </main>
+</body>
+
+</html>
